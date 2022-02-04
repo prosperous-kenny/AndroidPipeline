@@ -6,16 +6,16 @@ pipeline {
                           git "https://github.com/ipankajmishra/AndroidPipeline.git"
                      }
                 }
-                stage("Unit tests") {
-                    steps{
-                        bat 'gradlew test'
-                    }
-                           post{
-                                      always{
-                                      junit 'app/build/test-results/testDebugUnitTest/*.xml'
-                                      }
-                           }
-                }
+//                 stage("Unit tests") {
+//                     steps{
+//                         bat 'gradlew test'
+//                     }
+//                            post{
+//                                       always{
+//                                       junit 'app/build/test-results/testDebugUnitTest/*.xml'
+//                                       }
+//                            }
+//                 }
                       stage("Linting") {
                     steps{
                         bat ' gradlew lint'
